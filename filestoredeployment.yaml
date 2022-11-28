@@ -1,0 +1,37 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: filestore-svc
+  namespace: default
+  labels:
+    app: filestore  
+spec:
+  type: NodePort
+  ports:
+    - port: 8080
+      nodePort: 30225
+  selector:
+    app: filestore
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: filestore-deployment
+  namespace: default
+  labels:
+    app: filestore
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: filestore
+  template:
+    metadata:
+      labels:
+        app: filestore
+    spec:
+      containers:
+        - name: filestore
+          image: docker.io/ankitrkharb/filestore:1.0
+          ports:
+            - containerPort: 8080
