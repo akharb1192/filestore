@@ -7,12 +7,12 @@ Counting total word count
 Showing n most-frequent or less-frequent words in the files
 
 Example commands:
-filestore add file1.txt file2.txt
-filestore ls
-filestore rm file1.txt
-filestore update file1.txt
-filestore wc
-filestore freq-words -n 10 --order=asc
+filestore add file1.txt file2.txt,
+ filestore ls,
+ filestore rm file1.txt,
+ filestore update file1.txt,
+ filestore wc,
+ filestore freq-words -n 10 --order=asc,
 
 
 The app has been dockerized and pushed to docker hub as "docker.io/ankitrkharb/filestore:1.0"
