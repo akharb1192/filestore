@@ -16,4 +16,4 @@ filestore freq-words -n 10 --order=asc
 
 
 The app has been dockerized and pushed to docker hub as "docker.io/ankitrkharb/filestore:1.0"
-Same docker image has been pulled from docker hub and checked by deploying to local kubernetes cluster
+Same docker image has been pulled from docker hub and checked by deploying to local kubernetes cluster.
